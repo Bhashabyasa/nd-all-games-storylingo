@@ -324,8 +324,10 @@ function VoiceAnalyser(props) {
   }, [ai4bharat]);
 
   const fetchASROutput = async (sourceLanguage, base64Data) => {
-    const asr_api_key = process.env.REACT_APP_ASR_API_KEY;
-    const URL = process.env.REACT_APP_URL;
+    // const asr_api_key = process.env.REACT_APP_ASR_API_KEY;
+    // const URL = process.env.REACT_APP_URL;
+    const asr_api_key = '5Tctp7ruxRG_XPWHcXqdH9b2lOrxThUKZ_roIgtxVSeFDBHIc1tLRDoT6BFMyRrm';
+    const URL = 'https://api.dhruva.ekstep.ai';
     let samplingrate = 30000;
     if (lang_code === 'ta') {
       samplingrate = 16000;
