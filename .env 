@@ -1,0 +1,24 @@
+REACT_APP_STORYLINGO_MODE=play
+REACT_APP_authToken=""
+REACT_APP_pid=languagelab-portal.All-game-App
+REACT_APP_uid=anonymous
+REACT_APP_id=all-game-app
+REACT_APP_ver="0.6"
+REACT_APP_timeDiff="0",
+REACT_APP_host=https://telemetry-dev.theall.ai
+REACT_APP_endpoint=telemetry
+REACT_APP_apislug= /v1/
+REACT_APP_CHANNEL="Bhashabyasa"
+REACT_APP_env="all-player"
+REACT_APP_batchsize=2
+REACT_APP_ASR_API_KEY=5Tctp7ruxRG_XPWHcXqdH9b2lOrxThUKZ_roIgtxVSeFDBHIc1tLRDoT6BFMyRrm
+REACT_APP_CONTENT_SIZE=5
+REACT_APP_TELEMETRY_MODE=DT
+REACT_APP_URL="https://api.dhruva.ekstep.ai"
+REACT_APP_CAPTURE_AUDIO=true
+
+REACT_APP_AWS_ACCESS_KEY_ID=
+REACT_APP_AWS_SECRET_ACCESS_KEY=
+REACT_APP_AWS_s3_BUCKET_NAME=all-dev-storage
+REACT_APP_AWS_s3_BUCKET_URL=https://all-dev-storage.s3.ap-south-1.amazonaws.com
+REACT_APP_AWS_S3_REGION=ap-south-1
