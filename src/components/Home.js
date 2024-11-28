@@ -49,10 +49,10 @@ const Data = [
       val: [
         "Why is sea water salty, It is salty because there is salt in the sea",
         "Why is the chocolate sweet, It is sweet because there is sugar in it",
-        "Why is a lime sour, The acid in the lime makes it sour",
-        "Is there salt in tears, Yes there is",
-        "Is there sugar in a mango, Yes there is sugar in ripe mango",
-        "Is there acid in curd, Yes there is some acid in curd"
+        // "Why is a lime sour, The acid in the lime makes it sour",
+        // "Is there salt in tears, Yes there is",
+        // "Is there sugar in a mango, Yes there is sugar in ripe mango",
+        // "Is there acid in curd, Yes there is some acid in curd"
       ]
     },
     lang: 'en'
@@ -108,6 +108,52 @@ const Data = [
     },
     lang: 'en'
   },
+  {
+    "id": 5,
+    "avatar": "cat",
+    "title": "ಇಲಿ ಮತ್ತು ಬೆಕ್ಕು",
+    "story": {
+      "val": [
+        "ಒಂದು ಇಲಿ ಇತ್ತು",
+        "ಒಂದು ಬೆಕ್ಕು ಇತ್ತು, ಬೆಕ್ಕು ಇಲಿಯನ್ನು ನೋಡಿತು",
+        "ಬೆಕ್ಕು ಇಲಿಯ ಹಿಂದೆ ಓಡಿತು", "ಇಲಿ ಭಯದಿಂದ ಓಡಿತು",
+        "ಜಾಣ ಇಲಿ ಬಿಲದೊಳಗೆ ಸೇರಿತು", "ಪಾಪ, ಬೆಕ್ಕು ಬಿಲದ ಹೊರಗೆ ಉಳಿಯಿತು",
+        "ಕಾರಣ ಬಿಲವು ಚಿಕ್ಕದಾಗಿತ್ತು"
+      ]
+    },
+    "lang": "kn"
+  }, {
+    "id": 6,
+    "avatar": "found",
+    "title": "ಅಳಿಲು",
+    "story": {
+      "val": [
+        "ನಮ್ಮ ಮನೆಯ ಅಂಗಳದೊಳು ಒಂದು ಮರವಿದೆ",
+        "ಮರದ ತುಂಬ ಕೊಂಬೆಗಳಿವೆ",
+        "ಕೊಂಬೆಯ ಮೋಲೊಂದು ಅಳಿಲು",
+        "ಅಳಿಲಿನ ಬೆನ್ನಿನ ಮೇಲೆ ಮೂರು ಪಟ್ಟೆ",
+        "ಅಳಿಲು ಸರಸರನೆ ಮರದೊಳು ಓಡಾಡುವುದು",
+        "ನಮ್ಮ ಬೆಕ್ಕು ಕೆಳಗೆ ಕೂತು ಹೊಂಚು ಹಾಕುವುದು",
+      ]
+    },
+    "lang": "kn"
+  },
+  //  {
+  //   "id": 7,
+  //   "avatar": "found",
+  //   "title": "ಸಂಪಿಗೆ ಹೂ",
+  //   "story": {
+  //     "val": [
+  //       "ಸರಸಳ ಮನೆಯ ಹಿತ್ತಲಿನೊಳು ಸಂಪಿಗೆ ಮರವಿದೆ",
+  //       "ಮರದ ತುಂಬಾ ಸಂಪಿಗೆ ಹೂ ಅರಳಿವೆ",
+  //       " ಘಮಘಮ ಪರಿಮಳವ ಬೀರುತಿವೆ",
+  //       "ಸರಸಳ ಅಜ್ಜಿ ಸಂಪಿಗೆಯ ಮಾಲೆ ಮಾಡಿದರು",
+  //       "ಸರಸ ಮಾಲೆ ಮುಡಿದು ಶಾಲೆಗೆ ಬಂದಳು",
+  //       "ಈಗ ತರಗತಿಯ ತುಂಬ ಸಂಪಿಗೆಯ ಘಮಘಮ!"
+  //     ]
+  //   },
+  //   "lang": "kn"
+  // },
   // {
   //   id: 5,
   //   avatar: "letter",
