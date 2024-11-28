@@ -49,10 +49,10 @@ const Data = [
       val: [
         "Why is sea water salty, It is salty because there is salt in the sea",
         "Why is the chocolate sweet, It is sweet because there is sugar in it",
-        "Why is a lime sour, The acid in the lime makes it sour",
-        "Is there salt in tears, Yes there is",
-        "Is there sugar in a mango, Yes there is sugar in ripe mango",
-        "Is there acid in curd, Yes there is some acid in curd"
+        // "Why is a lime sour, The acid in the lime makes it sour",
+        // "Is there salt in tears, Yes there is",
+        // "Is there sugar in a mango, Yes there is sugar in ripe mango",
+        // "Is there acid in curd, Yes there is some acid in curd"
       ]
     },
     lang: 'en'
