@@ -19,7 +19,6 @@ body {
   height: 100%;
 }
 
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -95,19 +94,23 @@ code {
   border-radius: 10px;
   /* color: white; */
   font-family: fantasy;
-  background: rgb(2,0,36);
-  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(252,255,103,1) 0%, rgba(255,205,80,1) 100%);
+  background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(252, 255, 103, 1) 0%,
+    rgba(255, 205, 80, 1) 100%
+  );
   font-weight: 500;
   font-size: 25px;
   opacity: 0.9;
 }
 
-
 @font-face {
-  font-family: 'Rocher';
+  font-family: "Rocher";
   /* src: url('../../all-games-storyling/src/assets/fontFamily/RocherColorGX.woff2');
    */
-   src: url('./assets/fontFamily/RocherColorGX.woff2');
+  src: url("./assets/fontFamily/RocherColorGX.woff2");
 }
 
 body {
@@ -118,7 +121,6 @@ body {
 h1 {
   margin: 0;
 }
-
 
 @font-palette-values --Mint {
   font-family: Rocher;
@@ -136,12 +138,12 @@ h1 {
   cursor: pointer;
 }
 .min-selectstory {
-  margin-top: 40px;
+  margin-top: 70px;
   font-size: 38px;
   font-palette: --Mint;
   font-family: Rocher;
 }
-.position-set{
+.position-set {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -150,17 +152,17 @@ h1 {
 }
 .story-text {
   width: 472px;
-      height: 325px;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-weight: bold;
-      padding-left: 45px;
-      padding-right: 45px;
-    font-size: 18px;
+  height: 325px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  padding-left: 45px;
+  padding-right: 45px;
+  font-size: 18px;
 
   /* align-self: center;
   padding-left: 45px;
@@ -169,11 +171,9 @@ h1 {
   font-weight: bold;
   width: 500px;
   height: 500px; */
- }
+}
 
-
-
- @media only screen and (min-width:0) and (max-width: 600px) {
+@media only screen and (min-width: 0) and (max-width: 600px) {
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
       "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -187,7 +187,7 @@ h1 {
     height: 100%;
   }
 
-  .position-set{
+  .position-set {
     margin-top: -18px;
   }
 
@@ -198,15 +198,15 @@ h1 {
     width: 90%;
     padding-left: 24px;
     padding-right: 45px;
-   }
-  .player_text{
-    font-size: 20px;
-    margin-top: 50px;
+  }
+  .player_text {
+    /* font-size: 20px; */
+    margin-top: 70px;
     position: relative;
   }
 }
-@media only screen and (min-width:600px) and (max-width: 1597px) {
-  .position-set{
+@media only screen and (min-width: 600px) and (max-width: 1597px) {
+  .position-set {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -221,9 +221,9 @@ h1 {
     font-size: 18px;
     font-weight: bold;
     width: 400px;
-   }
+  }
 }
-.storyling-logo{
+.storyling-logo {
   cursor: pointer;
   height: 25px;
 }

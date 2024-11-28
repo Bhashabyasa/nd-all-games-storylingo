@@ -5,17 +5,18 @@
   overflow: hidden;
 }
 
-.top-header{
+.top-header {
   display: flex;
   width: 97%;
   box-sizing: border-box;
   top: 20px;
   justify-content: space-between;
+  align-items: center;
   padding: 0 0 0 30px;
   position: absolute;
 }
 
-.player-container{
+.player-container {
   display: flex;
   flex-direction: column;
   height: 50vh;
@@ -23,14 +24,14 @@
   justify-content: center;
 }
 
-.footerNext{
+.footerNext {
   display: flex;
   font-weight: 500;
   align-items: center;
   margin: 0 auto;
   position: fixed;
   bottom: 50px;
-  right:25px
+  right: 25px;
 }
 
 .grid {
@@ -52,22 +53,21 @@
   align-items: end;
   margin: 0px auto;
 }
-@media only screen and (min-width: 767px) and (max-width:905px) {
-.progress{
-  width:43% !important;
-  
+@media only screen and (min-width: 767px) and (max-width: 905px) {
+  .progress {
+    width: 43% !important;
+  }
+  .read-img-over {
+    height: 190px !important;
+  }
+  .btn-result {
+    left: 44% !important;
+  }
+  .coin {
+    height: 30px !important;
+  }
 }
-.read-img-over{
-  height: 190px !important;
-}
-.btn-result{
-  left:44% !important
-}
-.coin{
-  height:30px !important
-}
-}
-@media only screen and (min-width: 601px){
+@media only screen and (min-width: 601px) {
   .mobile-bar-container {
     display: none !important;
   }
@@ -182,7 +182,7 @@
   }
   .game-action-button {
     left: 34% !important;
-    width:37% !important;
+    width: 37% !important;
   }
 }
 
@@ -197,6 +197,17 @@
   height: 181px;
   margin-top: 20px;
   cursor: pointer;
+  position: relative;
+  border: 1px solid #ddd;
+  overflow: hidden; /* Ensures content beyond the boundaries is hidden */
+  text-align: center;
+}
+
+.grid-item img {
+  max-width: 100%; /* Ensures the image fits within the container */
+  max-height: 150px; /* Limits the image height */
+  object-fit: cover; /* Prevents distortion of the image */
+  border-radius: 24px 24px 0 0;
 }
 
 .grid-item-av {
@@ -432,8 +443,8 @@
     width: 100%;
     margin: 40px auto;
   }
-  .top-header{
-    padding:0;
-    width:96%
+  .top-header {
+    padding: 10px;
+    width: 100%;
   }
 }
