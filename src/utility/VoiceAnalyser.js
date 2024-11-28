@@ -324,6 +324,8 @@ function VoiceAnalyser(props) {
   }, [ai4bharat]);
 
   const fetchASROutput = async (sourceLanguage, base64Data) => {
+    // const asr_api_key = process.env.REACT_APP_ASR_API_KEY;
+    // const URL = process.env.REACT_APP_URL;
     const asr_api_key = '5Tctp7ruxRG_XPWHcXqdH9b2lOrxThUKZ_roIgtxVSeFDBHIc1tLRDoT6BFMyRrm';
     const URL = 'https://api.dhruva.ekstep.ai';
     let samplingrate = 30000;
@@ -372,10 +374,11 @@ function VoiceAnalyser(props) {
         if (process.env.REACT_APP_CAPTURE_AUDIO === 'true') {
           let getContentId = parseInt(localStorage.getItem('index'));
           let storyline = parseInt(localStorage.getItem('storySentenceId'));
-          var audioFileName = `${process.env.REACT_APP_CHANNEL}/${localStorage.getItem('contentSessionId') === null
+          var audioFileName = `${process.env.REACT_APP_CHANNEL}/${
+            localStorage.getItem('contentSessionId') === null
               ? localStorage.getItem('StorylingoContentSessionId')
               : localStorage.getItem('contentSessionId')
-            }-${Date.now()}-${getContentId}-${storyline}.wav`;
+          }-${Date.now()}-${getContentId}-${storyline}.wav`;
           localStorage.setItem('audioFileName', audioFileName);
           const command = new PutObjectCommand({
             Bucket: process.env.REACT_APP_AWS_s3_BUCKET_NAME,
