@@ -27,43 +27,46 @@ const Snowflake = (props) => {
 };
 
 function Result() {
-  const { Player1, Player2 } = usePlayers(); 
+  const { Player1, Player2 } = usePlayers();
   let player1 = localStorage.getItem("p1");
   let player2 = localStorage.getItem("p2");
   let score1 = localStorage.getItem("score1");
   let score2 = localStorage.getItem("score2");
   let numberOfPlayers = localStorage.getItem('players');
 
-  useEffect(()=>{
-    if(!!localStorage.getItem('buddyToken')){
-      send(localStorage.getItem("score1"),localStorage.getItem("score2"))
+  useEffect(() => {
+    if (!!localStorage.getItem('buddyToken')) {
+      send(localStorage.getItem("score1"), localStorage.getItem("score2"))
     }
-    else{
+    else {
       send(localStorage.getItem("score1"))
     }
-  },[])
+  }, [])
 
-  const send = (score1,score2) => {
-    if(!!localStorage.getItem('buddyToken')){
+  const send = (score1, score2) => {
+    if (!!localStorage.getItem('buddyToken')) {
       const Player1 = (score1 / 100).toPrecision(2);
       const Player2 = (score2 / 100).toPrecision(2);
+      console.log('Player2')
+
       if (window && window.parent) {
         window.parent.postMessage({
           score1: Player1,
           score2: Player2,
           message: 'storylingo-app-score',
-        });
+        }, "*");
       }
     }
-      else{
+    else {
+
       const Player1 = (score1 / 100).toPrecision(2);
       if (window && window.parent) {
         window.parent.postMessage({
           score1: Player1,
           message: 'storylingo-app-score',
-        });
+        }, "*");
       }
-      }
+    }
   };
 
 
@@ -113,7 +116,7 @@ function Result() {
         }
       >
         {numberOfPlayers === "p1s" ? (
-          <h1 className="mint">GAME OVER</h1> 
+          <h1 className="mint">GAME OVER</h1>
         ) : Number(score1) > Number(score2) ? (
           <h1 className="mint">{Player1.student_name || "Player 1"} WON</h1>
         ) : Number(score1) === Number(score2) ? (
@@ -175,7 +178,7 @@ function Result() {
                   fontWeight: "600",
                 }}
               >
-                 {Player2.student_name || "Player 2"}
+                {Player2.student_name || "Player 2"}
               </p>
             </div>
           </div>
