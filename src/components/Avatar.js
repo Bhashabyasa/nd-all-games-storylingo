@@ -92,7 +92,7 @@ function Avatar() {
           style={
             window.screen.width > 767
               ? { marginTop: "20px" }
-              : { marginTop: "60px" }
+              : { marginTop: "70px" }
           }
         />
       </div>

@@ -112,7 +112,7 @@ function Result() {
         style={
           window.screen.width > 767
             ? { marginTop: "20px" }
-            : { marginTop: "50px" }
+            : { marginTop: "70px" }
         }
       >
         {numberOfPlayers === "p1s" ? (
