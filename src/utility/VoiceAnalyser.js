@@ -88,6 +88,19 @@ import Azhaguthaan13 from '../assets/audio/Azhaguthaan13.m4a';
 import Azhaguthaan14 from '../assets/audio/Azhaguthaan14.m4a';
 import Azhaguthaan15 from '../assets/audio/Azhaguthaan15.m4a';
 import Azhaguthaan16 from '../assets/audio/Azhaguthaan16.m4a';
+import kn_Cats_fault1 from '../assets/audio/kn_Cats_fault1.m4a';
+import kn_Cats_fault2 from '../assets/audio/kn_Cats_fault2.m4a';
+import kn_Cats_fault3 from '../assets/audio/kn_Cats_fault3.m4a';
+import kn_Cats_fault4 from '../assets/audio/kn_Cats_fault4.m4a';
+import kn_Cats_fault5 from '../assets/audio/kn_Cats_fault5.m4a';
+import kn_Cats_fault6 from '../assets/audio/kn_Cats_fault6.m4a';
+import kn_Cats_fault7 from '../assets/audio/kn_Cats_fault7.m4a';
+import kn_Cats_fault8 from '../assets/audio/kn_Cats_fault8.m4a';
+import kn_Cats_fault9 from '../assets/audio/kn_Cats_fault9.m4a';
+import kn_Cats_fault10 from '../assets/audio/kn_Cats_fault10.m4a';
+import kn_Cats_fault11 from '../assets/audio/kn_Cats_fault11.m4a';
+import kn_Cats_fault12 from '../assets/audio/kn_Cats_fault12.m4a';
+// kn_Cats_fault1
 import AudioCompare from './AudioCompare';
 import Loader from './Loader';
 import { interactCall } from '../services/callTelemetryIntract';
@@ -166,41 +179,64 @@ const AudioPath = {
     8: Cats_fault9,
   },
   5: {
-    0: Letter1,
-    1: Letter2,
-    2: Letter3,
-    3: Letter4,
-    4: Letter5,
-    5: Letter6,
-    6: Letter7,
-    7: Letter8,
-    8: Letter9,
-    9: Letter10,
-    10: Letter11,
-    11: Letter12,
-    12: Letter13,
-    13: Letter14,
-    14: Letter15,
-    15: Letter16,
-  },
-  6: {
-    0: Azhaguthaan1,
-    1: Azhaguthaan2,
-    2: Azhaguthaan3,
-    3: Azhaguthaan4,
-    4: Azhaguthaan5,
-    5: Azhaguthaan6,
-    6: Azhaguthaan7,
-    7: Azhaguthaan8,
-    8: Azhaguthaan9,
-    9: Azhaguthaan10,
-    10: Azhaguthaan11,
-    11: Azhaguthaan12,
-    13: Azhaguthaan13,
-    14: Azhaguthaan14,
-    15: Azhaguthaan15,
-    16: Azhaguthaan16,
-  },
+    0: kn_Cats_fault1,
+    1: kn_Cats_fault2,
+    2: kn_Cats_fault3,
+    3: kn_Cats_fault4,
+    4: kn_Cats_fault5,
+    5: kn_Cats_fault6,
+    // 6: kn_Cats_fault7,
+    // 7: kn_Cats_fault8,
+    // 8: kn_Cats_fault9,
+    // 9: kn_Cats_fault10,
+    // 10: kn_Cats_fault11,
+    // 11: kn_Cats_fault12,
+
+  }, 6: {
+    0: kn_Cats_fault7,
+    1: kn_Cats_fault8,
+    2: kn_Cats_fault9,
+    3: kn_Cats_fault10,
+    4: kn_Cats_fault11,
+    5: kn_Cats_fault12,
+  }
+
+  // 5: {
+  //   0: Letter1,
+  //   1: Letter2,
+  //   2: Letter3,
+  //   3: Letter4,
+  //   4: Letter5,
+  //   5: Letter6,
+  //   6: Letter7,
+  //   7: Letter8,
+  //   8: Letter9,
+  //   9: Letter10,
+  //   10: Letter11,
+  //   11: Letter12,
+  //   12: Letter13,
+  //   13: Letter14,
+  //   14: Letter15,
+  //   15: Letter16,
+  // },
+  // 6: {
+  //   0: Azhaguthaan1,
+  //   1: Azhaguthaan2,
+  //   2: Azhaguthaan3,
+  //   3: Azhaguthaan4,
+  //   4: Azhaguthaan5,
+  //   5: Azhaguthaan6,
+  //   6: Azhaguthaan7,
+  //   7: Azhaguthaan8,
+  //   8: Azhaguthaan9,
+  //   9: Azhaguthaan10,
+  //   10: Azhaguthaan11,
+  //   11: Azhaguthaan12,
+  //   13: Azhaguthaan13,
+  //   14: Azhaguthaan14,
+  //   15: Azhaguthaan15,
+  //   16: Azhaguthaan16,
+  // },
 };
 const currentIndex = localStorage.getItem('index');
 // console.log("get current index", currentIndex);
@@ -236,6 +272,9 @@ function VoiceAnalyser(props) {
   const TAMIL_ASR_LANGUAGE_CODE =
     'ai4bharat/conformer-multilingual-dravidian--gpu-t4';
 
+  const KANNADA_ASR_LANGUAGE_CODE =
+    'ai4bharat/conformer-multilingual-dravidian--gpu-t4';
+
   const [asr_language_code, set_asr_language_code] = useState(
     DEFAULT_ASR_LANGUAGE_CODE,
   );
@@ -247,6 +286,9 @@ function VoiceAnalyser(props) {
         break;
       case 'ta':
         set_asr_language_code(TAMIL_ASR_LANGUAGE_CODE);
+        break;
+      case 'kn':
+        set_asr_language_code(KANNADA_ASR_LANGUAGE_CODE);
         break;
       default:
         set_asr_language_code(DEFAULT_ASR_LANGUAGE_CODE);
@@ -374,11 +416,10 @@ function VoiceAnalyser(props) {
         if (process.env.REACT_APP_CAPTURE_AUDIO === 'true') {
           let getContentId = parseInt(localStorage.getItem('index'));
           let storyline = parseInt(localStorage.getItem('storySentenceId'));
-          var audioFileName = `${process.env.REACT_APP_CHANNEL}/${
-            localStorage.getItem('contentSessionId') === null
-              ? localStorage.getItem('StorylingoContentSessionId')
-              : localStorage.getItem('contentSessionId')
-          }-${Date.now()}-${getContentId}-${storyline}.wav`;
+          var audioFileName = `${process.env.REACT_APP_CHANNEL}/${localStorage.getItem('contentSessionId') === null
+            ? localStorage.getItem('StorylingoContentSessionId')
+            : localStorage.getItem('contentSessionId')
+            }-${Date.now()}-${getContentId}-${storyline}.wav`;
           localStorage.setItem('audioFileName', audioFileName);
           const command = new PutObjectCommand({
             Bucket: process.env.REACT_APP_AWS_s3_BUCKET_NAME,
